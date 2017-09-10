@@ -5,9 +5,9 @@
 }
 
 body {
-  padding-top: 40px; /* 40px to make the container go all the way to the bottom of the topbar */
-  font-family: "Ubuntu";
-  background-image: url(../img/bodybg.png);
+  padding-top: 44px; /* 44px to make the container go all the way to the bottom of the topbar */
+  font-family: "Roboto";
+  font-weight: 400;
 }
 
 a[href^="https://"],
@@ -36,7 +36,6 @@ p.user {
 
 #main {
   background-color: white;
-  box-shadow: 0 0 5px silver;
   z-index: 2;
 }
 
@@ -44,6 +43,8 @@ p.user {
   padding: 20px 5px;
   padding-bottom: 5px;
   overflow: hidden;
+  font-size: 15px;
+  font-family: "Roboto", "Lucida Grande", Lucida, Verdana, sans-serif;
 }
 
 #content img {
@@ -121,26 +122,23 @@ dl.search-results dt {
   font-size: 120%;
 }
 
-h2,
-h1 {
-  border-bottom: 1px solid #ddd;
-  font-family:"Ubuntu Condensed";
-  margin: 0 0 20px 0;
+h1, .h1 {
+  font-size: 1.6em;
+  color: #757575;
+  margin: 0 0 25px 0;
 }
 
-h1 {
-  font-size: 32px;
+h2, .h2 {
+  font-size: 1.35em;
+  color: #3f7baf;
+  margin: 0 0 22px 0;
 }
 
-h2 {
-  font-size: 24px;
+h3, .h3 {
+  font-size: 1.2em;
 }
 
-h3 {
-  font-size: 18px;
-}
-
-h3 {
+h3, .h3 {
   margin: 0 0 10px 0;
 }
 
@@ -205,7 +203,7 @@ hr {
 }
 
 .compare {
-  font-family: Consolas, monospace;
+  font-family: "Roboto Mono", Consolas, monospace;
   font-size: 12px;
 }
 
@@ -240,12 +238,16 @@ hr {
 }
 
 .input-group.search input {
-  color: #fff;
-  background-color: #515151;
-  border-color: #111;
+  color: #4c4c4c;
+  background-color: #eceef1;
+  border-color: #a7a7a7;
 }
 
 /* Overrides Bootstrap */
+
+.navbar {
+  height: 44px;
+}
 
 .navbar-right {
   float: right;
@@ -267,10 +269,16 @@ hr {
 .navbar-brand {
   overflow: hidden;
   max-width: 60%;
+  color: white;
 }
 
 .navbar-inverse {
-  background-color: rgba(0,0,0);
+  background-color: #c7cdd6;
+  border: none;
+}
+
+.navbar-inverse .navbar-brand {
+  color: white;
 }
 
 .alert {
@@ -469,7 +477,7 @@ ul.doc-list > li .message {
 
 .markItUpEditor {
   height: 500px !important;
-  font-family: Consolas, monospace !important;
+  font-family: "Roboto Mono", Consolas, monospace !important;
 }
 
 .toolbar {
@@ -566,7 +574,7 @@ input#pageTitle {
 }
 
 a.absent {
-  color: red;
+  color: #c00;
 }
 
 form.edit {
@@ -638,7 +646,7 @@ a.btn-auth:hover {
   }
 
   #content {
-    padding: 40px 25px;
+    padding: 44px 25px;
   }
 
   .navbar-form.search {
@@ -650,7 +658,7 @@ a.btn-auth:hover {
   }
 
   .tools-handle {
-    top: 41px;
+    top: 45px;
     left: 60%;
   }
 }

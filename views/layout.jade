@@ -10,6 +10,7 @@ include mixins/links
       title= title
       +asset("/vendor/bootstrap/css/bootstrap.min.css")
       link(rel="stylesheet", href="//fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Condensed")
+      link(rel="stylesheet", href="//fonts.googleapis.com/css?family=Roboto+Mono:100,400,700,300|Roboto:100,200,400,300,700")
       +asset("/css/style.css")
       +asset("/css/ionicons.min.css")
       +asset("/css/shCoreDefault.css")
@@ -50,11 +51,13 @@ include mixins/links
           if hasSidebar()
             .col-md-2.with-sidebar
               .content !{_sidebar}
-          else
-            .col-md-2
 
-          #main.hide-tools.col-md-8
-            block content
+          if hasSidebar()
+            #main.hide-tools.col-md-10
+              block content
+          else
+            #main.hide-tools.col-md-12
+              block content
 
         if hasFooter()
           .row
